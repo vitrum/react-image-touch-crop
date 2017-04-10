@@ -24,25 +24,28 @@
     "react-dom": "^15.3.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-loader": "^6.2.10",
-    "babel-plugin-transform-class-properties": "^6.19.0",
-    "babel-plugin-transform-function-bind": "^6.8.0",
-    "babel-plugin-transform-object-rest-spread": "^6.20.2",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "rimraf": "^2.5.4",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.16.2"
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "cross-env": "^3.2.4",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
   },
   "main": "dist/react-image-touch-crop.js",
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "babel --minified --no-comments src -d dist",
-    "watch": "babel src/react-image-touch-crop.js -w -o dist/react-image-touch-crop.js",
-    "demo:build": "webpack",
-    "demo:watch": "webpack-dev-server",
-    "prepublish": "npm run clean && npm run build"
+    "start": "webpack --progress --colors --watch --config docs/webpack.config.js"
   },
   "files": [
     "dist",
